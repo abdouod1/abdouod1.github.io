@@ -75,8 +75,16 @@
   .logo{
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 1.15rem;
-    letter-spacing: 0.02em;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .logo-icon{
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
   }
   .logo span{ color: var(--accent); }
   .navlinks{
@@ -356,7 +364,20 @@
 
 <header>
   <nav class="wrap">
-    <div class="logo">AO<span>.</span></div>
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="12" y1="12" x2="4" y2="6" stroke="var(--border)" stroke-width="1.4"/>
+        <line x1="12" y1="12" x2="20" y2="6" stroke="var(--border)" stroke-width="1.4"/>
+        <line x1="12" y1="12" x2="4" y2="18" stroke="var(--border)" stroke-width="1.4"/>
+        <line x1="12" y1="12" x2="20" y2="18" stroke="var(--border)" stroke-width="1.4"/>
+        <circle cx="12" cy="12" r="3" fill="var(--accent)"/>
+        <circle cx="4" cy="6" r="1.8" fill="var(--muted)"/>
+        <circle cx="20" cy="6" r="1.8" fill="var(--muted)"/>
+        <circle cx="4" cy="18" r="1.8" fill="var(--muted)"/>
+        <circle cx="20" cy="18" r="1.8" fill="var(--muted)"/>
+      </svg>
+      Abdelhadi
+    </div>
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
