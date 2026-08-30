@@ -1,819 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Abdelhadi Ouladdaoud | Cybersecurity & Network Engineer</title>
-
-    <meta name="description"
-          content="Portfolio of Abdelhadi Ouladdaoud, Network Infrastructure and Cybersecurity professional.">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b1120;
-            color: #e5e7eb;
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        /* NAVIGATION */
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(11, 17, 32, 0.95);
-            border-bottom: 1px solid #1f2937;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #38bdf8;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav a {
-            color: #cbd5e1;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        /* HERO */
-
-        #home {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 70px;
-        }
-
-        .hero {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #38bdf8;
-        }
-
-        .hero h2 {
-            font-size: 25px;
-            color: #94a3b8;
-            margin-bottom: 25px;
-            font-weight: normal;
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #cbd5e1;
-            margin-bottom: 30px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            padding: 12px 22px;
-            border-radius: 6px;
-            border: 1px solid #38bdf8;
-            color: #38bdf8;
-            transition: 0.3s;
-        }
-
-        .button.primary {
-            background: #38bdf8;
-            color: #07111f;
-            font-weight: bold;
-        }
-
-        .button:hover {
-            transform: translateY(-2px);
-        }
-
-        /* SECTIONS */
-
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            font-size: 32px;
-            margin-bottom: 45px;
-            color: #f8fafc;
-        }
-
-        .section-title span {
-            color: #38bdf8;
-        }
-
-        /* ABOUT */
-
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .about p {
-            color: #cbd5e1;
-            margin-bottom: 15px;
-        }
-
-        .info-box {
-            background: #111827;
-            border: 1px solid #1f2937;
-            padding: 25px;
-            border-radius: 10px;
-        }
-
-        .info-box div {
-            margin-bottom: 15px;
-        }
-
-        .info-box strong {
-            color: #38bdf8;
-        }
-
-        /* EXPERIENCE */
-
-        .timeline {
-            border-left: 2px solid #38bdf8;
-            padding-left: 30px;
-        }
-
-        .timeline-item {
-            margin-bottom: 40px;
-        }
-
-        .timeline-item h3 {
-            color: #f8fafc;
-            font-size: 22px;
-        }
-
-        .timeline-item .company {
-            color: #38bdf8;
-            font-weight: bold;
-        }
-
-        .timeline-item .date {
-            color: #94a3b8;
-            font-size: 14px;
-            margin: 5px 0 15px;
-        }
-
-        .timeline-item ul {
-            padding-left: 20px;
-            color: #cbd5e1;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-card {
-            background: #111827;
-            border: 1px solid #1f2937;
-            padding: 25px;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-        }
-
-        .skill-card h3 {
-            color: #38bdf8;
-            margin-bottom: 10px;
-        }
-
-        .skill-card p {
-            color: #cbd5e1;
-        }
-
-        /* PROJECTS */
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .project {
-            background: #111827;
-            border: 1px solid #1f2937;
-            padding: 30px;
-            border-radius: 10px;
-        }
-
-        .project h3 {
-            color: #38bdf8;
-            margin-bottom: 15px;
-        }
-
-        .project p {
-            color: #cbd5e1;
-            margin-bottom: 15px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag {
-            background: #1e293b;
-            color: #93c5fd;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 13px;
-        }
-
-        /* EDUCATION */
-
-        .education {
-            background: #111827;
-            border: 1px solid #1f2937;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .education h3 {
-            color: #38bdf8;
-        }
-
-        .education p {
-            color: #cbd5e1;
-        }
-
-        /* CONTACT */
-
-        .contact {
-            text-align: center;
-            max-width: 700px;
-            margin: auto;
-        }
-
-        .contact p {
-            color: #cbd5e1;
-            margin-bottom: 25px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        /* FOOTER */
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid #1f2937;
-            color: #64748b;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 700px) {
-
-            nav ul {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .hero h2 {
-                font-size: 20px;
-            }
-
-            .about {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdelhadi Ouladdaoud | Cybersecurity &amp; Network Engineer</title>
+<meta name="description" content="Portfolio of Abdelhadi Ouladdaoud, Network Infrastructure and Cybersecurity professional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B0E14;
+    --panel: #121826;
+    --panel-2: #0F141F;
+    --border: #232B3D;
+    --text: #E7ECF3;
+    --muted: #8B96A8;
+    --accent: #35D0BA;
+    --accent-dim: rgba(53,208,186,0.15);
+    --amber: #F5A623;
+    --radius: 3px;
+    --maxw: 1040px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(139,150,168,0.12) 1px, transparent 0);
+    background-size: 28px 28px;
+  }
+
+  h1,h2,h3{
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  a{ color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .mono{ font-family: 'IBM Plex Mono', monospace; }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* NAV */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(11,14,20,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+  .logo span{ color: var(--accent); }
+  .navlinks{
+    display: flex;
+    gap: 28px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .navlinks a:hover{ color: var(--text); }
+  .navlinks{ display: none; }
+  @media(min-width: 780px){ .navlinks{ display: flex; } }
+
+  /* HERO */
+  .hero{
+    padding: 88px 0 72px;
+    display: grid;
+    gap: 48px;
+  }
+  @media(min-width: 860px){
+    .hero{ grid-template-columns: 1.3fr 0.9fr; align-items: center; }
+  }
+  .eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-bottom: 14px;
+  }
+  .hero h1{
+    font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+    font-weight: 700;
+  }
+  .hero .role{
+    color: var(--muted);
+    font-size: 1.15rem;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+  .hero p{
+    max-width: 54ch;
+    color: var(--muted);
+    margin-top: 18px;
+  }
+  .cta-row{
+    display: flex;
+    gap: 14px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .btn{
+    padding: 11px 20px;
+    border-radius: var(--radius);
+    font-size: 0.92rem;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .btn-primary{
+    background: var(--accent);
+    color: #06110F;
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+  .btn-primary:hover{ background: #48DDC8; }
+  .btn-ghost{ color: var(--text); }
+  .btn-ghost:hover{ border-color: var(--accent); color: var(--accent); }
+
+  /* STATUS PANEL */
+  .status-panel{
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+  }
+  .status-title{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .status-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    font-size: 0.88rem;
+  }
+  .status-row + .status-row{ border-top: 1px solid var(--border); }
+  .status-label{ color: var(--text); }
+  .status-value{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+  .dot{
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 var(--accent-dim);
+    animation: pulse 2.4s infinite;
+  }
+  @keyframes pulse{
+    0%{ box-shadow: 0 0 0 0 rgba(53,208,186,0.5); }
+    70%{ box-shadow: 0 0 0 7px rgba(53,208,186,0); }
+    100%{ box-shadow: 0 0 0 0 rgba(53,208,186,0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .dot{ animation: none; }
+    html{ scroll-behavior: auto; }
+  }
+
+  /* SECTIONS */
+  section{ padding: 64px 0; border-top: 1px solid var(--border); }
+  .section-head{
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 36px;
+  }
+  .section-head .tag{
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
+  .section-head h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  /* ABOUT */
+  .about-grid{
+    display: grid;
+    gap: 32px;
+  }
+  @media(min-width: 780px){
+    .about-grid{ grid-template-columns: 1.5fr 1fr; }
+  }
+  .about-grid p{ color: var(--muted); max-width: 62ch; }
+  .about-grid p + p{ margin-top: 14px; }
+  .facts{
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    align-self: start;
+  }
+  .fact{ padding: 10px 0; }
+  .fact + .fact{ border-top: 1px solid var(--border); }
+  .fact-k{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .fact-v{ margin-top: 3px; font-weight: 500; }
+
+  /* EXPERIENCE */
+  .job{
+    border-left: 2px solid var(--accent);
+    padding-left: 22px;
+    margin-bottom: 8px;
+  }
+  .job-head{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .job-head h3{ font-size: 1.15rem; font-weight: 600; }
+  .job-meta{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .job ul{
+    margin: 14px 0 0;
+    padding-left: 18px;
+    color: var(--muted);
+  }
+  .job li{ margin-bottom: 7px; }
+
+  /* SKILLS */
+  .skills-grid{
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .skill-card{
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px;
+  }
+  .skill-card h3{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .chips{ display: flex; flex-wrap: wrap; gap: 7px; }
+  .chip{
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 4px 9px;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  /* PROJECTS */
+  .projects{ display: grid; gap: 20px; }
+  @media(min-width: 780px){ .projects{ grid-template-columns: repeat(3, 1fr); } }
+  .project-card{
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .project-status{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  .project-card h3{ font-size: 1.05rem; font-weight: 600; }
+  .project-card p{ color: var(--muted); font-size: 0.92rem; flex-grow: 1; }
+  .project-link{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* EDUCATION */
+  .edu-card{
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+  .edu-card + .edu-card{ margin-top: 16px; }
+  .edu-card h3{ font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
+  .edu-card .meta{ color: var(--muted); font-size: 0.88rem; }
+  .cert-list{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.9rem; }
+  .cert-list li{ margin-bottom: 4px; }
+
+  /* CONTACT */
+  .contact-panel{
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    text-align: left;
+  }
+  .contact-panel p{ color: var(--muted); max-width: 50ch; margin-top: 10px; }
+  .contact-links{ display: flex; gap: 14px; margin-top: 26px; flex-wrap: wrap; }
+
+  footer{
+    padding: 28px 0 40px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
 </head>
-
 <body>
 
-<!-- NAVIGATION -->
-
-<nav>
-    <div class="container nav-container">
-
-        <div class="logo">AO.</div>
-
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-
+<header>
+  <nav class="wrap">
+    <div class="logo">AO<span>.</span></div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </div>
-</nav>
+  </nav>
+</header>
 
+<main class="wrap">
 
-<!-- HERO -->
-
-<section id="home">
-
-    <div class="container">
-
-        <div class="hero">
-
-            <h1>
-                Hi, I'm <span>Abdelhadi</span>.
-            </h1>
-
-            <h2>
-                Network Infrastructure & Cybersecurity Professional
-            </h2>
-
-            <p>
-                Computer Science graduate specialized in Network Infrastructure
-                and Cybersecurity, with professional experience in network
-                operations, infrastructure monitoring and security.
-            </p>
-
-            <div class="buttons">
-
-                <a class="button primary" href="#projects">
-                    View My Projects
-                </a>
-
-                <a class="button" href="#contact">
-                    Contact Me
-                </a>
-
-            </div>
-
-        </div>
-
+  <section class="hero" style="border-top:none;">
+    <div>
+      <div class="eyebrow">Network Infrastructure &amp; Cybersecurity</div>
+      <h1>Abdelhadi Ouladdaoud</h1>
+      <div class="role">NOC Manager · Network &amp; Security Operations</div>
+      <p>Computer Science graduate specialized in network infrastructure and cybersecurity, with hands-on experience running NOC operations, monitoring infrastructure, and responding to security incidents.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">View projects</a>
+        <a class="btn btn-ghost" href="#contact">Contact me</a>
+      </div>
     </div>
 
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            About <span>Me</span>
-        </h2>
-
-        <div class="about">
-
-            <div>
-
-                <p>
-                    I am a Computer Science graduate specialized in Network
-                    Infrastructure and Cybersecurity.
-                </p>
-
-                <p>
-                    My professional experience focuses on network operations,
-                    infrastructure monitoring, troubleshooting, cybersecurity
-                    and technical team coordination.
-                </p>
-
-                <p>
-                    I am particularly interested in network security,
-                    cybersecurity operations, SIEM, network automation and
-                    resilient infrastructure.
-                </p>
-
-            </div>
-
-            <div class="info-box">
-
-                <div>
-                    <strong>Specialization</strong><br>
-                    Network Infrastructure & Cybersecurity
-                </div>
-
-                <div>
-                    <strong>Role</strong><br>
-                    NOC Manager
-                </div>
-
-                <div>
-                    <strong>Focus</strong><br>
-                    Networking • Cybersecurity • Infrastructure
-                </div>
-
-                <div>
-                    <strong>Languages</strong><br>
-                    English • French • Arabic
-                </div>
-
-            </div>
-
-        </div>
-
+    <div class="status-panel">
+      <div class="status-title">// current focus</div>
+      <div class="status-row">
+        <span class="status-label">NOC operations</span>
+        <span class="status-value"><span class="dot"></span>Active</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Security monitoring</span>
+        <span class="status-value"><span class="dot"></span>Ongoing</span>
+      </div>
+      <div class="status-row">
+        <span class="status-label">Network infrastructure</span>
+        <span class="status-value"><span class="dot"></span>Managed</span>
+      </div>
     </div>
+  </section>
 
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            Professional <span>Experience</span>
-        </h2>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-
-                <h3>NOC Manager</h3>
-
-                <div class="company">
-                    Liptinfor
-                </div>
-
-                <div class="date">
-                    October 2024 – Present
-                </div>
-
-                <ul>
-
-                    <li>
-                        Managing Network Operations Center activities and
-                        network infrastructure.
-                    </li>
-
-                    <li>
-                        Monitoring network performance, availability and
-                        customer links.
-                    </li>
-
-                    <li>
-                        Leading technical teams and coordinating network
-                        interventions.
-                    </li>
-
-                    <li>
-                        Troubleshooting network incidents, outages,
-                        instability and bandwidth issues.
-                    </li>
-
-                    <li>
-                        Working with network security technologies including
-                        firewalls, SIEM and IDS.
-                    </li>
-
-                    <li>
-                        Monitoring infrastructure using PRTG and analyzing
-                        network performance.
-                    </li>
-
-                    <li>
-                        Preparing technical reports and coordinating with
-                        customers, engineers and other teams.
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
+  <section id="about">
+    <div class="section-head">
+      <span class="tag">01</span>
+      <h2>About</h2>
     </div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            Technical <span>Skills</span>
-        </h2>
-
-        <div class="skills">
-
-            <div class="skill-card">
-                <h3>Networking</h3>
-                <p>
-                    TCP/IP, Routing, Switching, VLAN, MPLS,
-                    Network Troubleshooting, Network Monitoring
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Cybersecurity</h3>
-                <p>
-                    SIEM, IDS, Firewall, Network Security,
-                    Security Monitoring and Incident Analysis
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Network Tools</h3>
-                <p>
-                    MikroTik, FortiGate, FortiSIEM,
-                    FortiMail, PRTG, Cambium and UniFi
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Programming</h3>
-                <p>
-                    Python, Network Automation,
-                    Data Processing and Scripting
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Systems & DevOps</h3>
-                <p>
-                    Linux, Docker, MySQL and
-                    infrastructure deployment
-                </p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Data & Analytics</h3>
-                <p>
-                    Apache Superset, data visualization,
-                    CSV processing and network analytics
-                </p>
-            </div>
-
+    <div class="about-grid">
+      <div>
+        <p>I'm a Computer Science graduate specialized in Network Infrastructure and Cybersecurity. My professional experience focuses on network operations, infrastructure monitoring, troubleshooting, cybersecurity, and technical team coordination.</p>
+        <p>I'm particularly interested in network security, cybersecurity operations, SIEM, network automation, and building resilient infrastructure.</p>
+      </div>
+      <div class="facts">
+        <div class="fact">
+          <div class="fact-k">Specialization</div>
+          <div class="fact-v">Network Infrastructure &amp; Cybersecurity</div>
         </div>
-
+        <div class="fact">
+          <div class="fact-k">Role</div>
+          <div class="fact-v">NOC Manager</div>
+        </div>
+        <div class="fact">
+          <div class="fact-k">Focus</div>
+          <div class="fact-v">Networking, Cybersecurity, Infrastructure</div>
+        </div>
+        <div class="fact">
+          <div class="fact-k">Languages</div>
+          <div class="fact-v">English, French, Arabic</div>
+        </div>
+      </div>
     </div>
+  </section>
 
-</section>
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            Featured <span>Projects</span>
-        </h2>
-
-        <div class="projects">
-
-            <div class="project">
-
-                <h3>SIEM Deployment & Network Intrusion Detection</h3>
-
-                <p>
-                    Academic cybersecurity project focused on analyzing
-                    network traffic and detecting malicious activity using
-                    the UNSW-NB15 dataset.
-                </p>
-
-                <p>
-                    The project involved data processing, machine learning
-                    classification and visualization of security events.
-                </p>
-
-                <div class="tags">
-
-                    <span class="tag">SIEM</span>
-                    <span class="tag">Cybersecurity</span>
-                    <span class="tag">UNSW-NB15</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">Apache Superset</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Network Monitoring Infrastructure</h3>
-
-                <p>
-                    Monitoring and operational management of network
-                    infrastructure using PRTG, with focus on availability,
-                    bandwidth utilization, performance and incident detection.
-                </p>
-
-                <div class="tags">
-
-                    <span class="tag">PRTG</span>
-                    <span class="tag">Network Monitoring</span>
-                    <span class="tag">NOC</span>
-                    <span class="tag">Networking</span>
-
-                </div>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Network Security Infrastructure</h3>
-
-                <p>
-                    Operational experience with firewall and security
-                    infrastructure, including traffic analysis, security
-                    monitoring and network troubleshooting.
-                </p>
-
-                <div class="tags">
-
-                    <span class="tag">FortiGate</span>
-                    <span class="tag">FortiSIEM</span>
-                    <span class="tag">FortiMail</span>
-                    <span class="tag">IDS</span>
-                    <span class="tag">Network Security</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
+  <section id="experience">
+    <div class="section-head">
+      <span class="tag">02</span>
+      <h2>Experience</h2>
     </div>
-
-</section>
-
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-    <div class="container">
-
-        <h2 class="section-title">
-            <span>Education</span> & Certifications
-        </h2>
-
-        <div class="education">
-
-            <h3>
-                Bachelor / Licence in Computer Science
-            </h3>
-
-            <p>
-                Specialization: Network Infrastructure & Cybersecurity
-            </p>
-
-            <p>
-                Institut Numidia of Technology (NIT), Algeria
-            </p>
-
-        </div>
-
-
-        <div class="education">
-
-            <h3>
-                Cisco Networking & Cybersecurity Certifications
-            </h3>
-
-            <p>
-                • Introduction to Networks<br>
-                • Introduction to Cybersecurity<br>
-                • Cybersecurity Essentials
-            </p>
-
-        </div>
-
+    <div class="job">
+      <div class="job-head">
+        <h3>NOC Manager</h3>
+        <span class="job-meta">Liptinfor · Oct 2024 – Present</span>
+      </div>
+      <ul>
+        <li>Manage Network Operations Center activities and network infrastructure.</li>
+        <li>Monitor network performance, availability, and customer links.</li>
+        <li>Lead technical teams and coordinate network interventions.</li>
+        <li>Troubleshoot network incidents, outages, instability, and bandwidth issues.</li>
+        <li>Work with network security technologies including firewalls, SIEM, and IDS.</li>
+        <li>Monitor infrastructure using PRTG and analyze network performance.</li>
+        <li>Prepare technical reports and coordinate with customers, engineers, and other teams.</li>
+      </ul>
     </div>
+  </section>
 
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-    <div class="container">
-
-        <div class="contact">
-
-            <h2 class="section-title">
-                Get In <span>Touch</span>
-            </h2>
-
-            <p>
-                Interested in networking, cybersecurity or collaboration?
-                Feel free to contact me.
-            </p>
-
-            <div class="contact-links">
-
-                <!-- Replace these links with your real accounts -->
-
-                <a
-                    class="button"
-                    href="https://github.com/abdouod1"
-                    target="_blank">
-                    GitHub
-                </a>
-
-                <a
-                    class="button"
-                    href="https://www.linkedin.com/in/abdelhadi-ouladdaoud-13b0a1230/"
-                    target="_blank">
-                    LinkedIn
-                </a>
-
-                <a
-                    class="button"
-                    href="mailto:oddadi11@gmail.com">
-                    Email
-                </a>
-
-            </div>
-
-        </div>
-
+  <section id="skills">
+    <div class="section-head">
+      <span class="tag">03</span>
+      <h2>Technical skills</h2>
     </div>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Networking</h3>
+        <div class="chips">
+          <span class="chip">TCP/IP</span><span class="chip">Routing</span><span class="chip">Switching</span>
+          <span class="chip">VLAN</span><span class="chip">MPLS</span><span class="chip">Troubleshooting</span>
+          <span class="chip">Monitoring</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Cybersecurity</h3>
+        <div class="chips">
+          <span class="chip">SIEM</span><span class="chip">IDS</span><span class="chip">Firewall</span>
+          <span class="chip">Network Security</span><span class="chip">Incident Analysis</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Network tools</h3>
+        <div class="chips">
+          <span class="chip">MikroTik</span><span class="chip">FortiGate</span><span class="chip">FortiSIEM</span>
+          <span class="chip">FortiMail</span><span class="chip">PRTG</span><span class="chip">Cambium</span><span class="chip">UniFi</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">Network Automation</span><span class="chip">Data Processing</span><span class="chip">Scripting</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Systems &amp; DevOps</h3>
+        <div class="chips">
+          <span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">MySQL</span><span class="chip">Deployment</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Data &amp; analytics</h3>
+        <div class="chips">
+          <span class="chip">Apache Superset</span><span class="chip">Data Visualization</span><span class="chip">CSV Processing</span><span class="chip">Network Analytics</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <section id="projects">
+    <div class="section-head">
+      <span class="tag">04</span>
+      <h2>Featured projects</h2>
+    </div>
+    <div class="projects">
+      <div class="project-card">
+        <div class="project-status"><span class="dot" style="background:var(--accent)"></span>Academic project</div>
+        <h3>SIEM Deployment &amp; Network Intrusion Detection</h3>
+        <p>Analyzed network traffic and detected malicious activity using the UNSW-NB15 dataset, combining data processing, ML classification, and visualization of security events.</p>
+        <div class="project-link">Python · Docker · MySQL · Superset</div>
+      </div>
+      <div class="project-card">
+        <div class="project-status"><span class="dot" style="background:var(--amber)"></span>Operational work</div>
+        <h3>Network Monitoring Infrastructure</h3>
+        <p>Monitoring and operational management of network infrastructure using PRTG, focused on availability, bandwidth utilization, performance, and incident detection.</p>
+        <div class="project-link">PRTG · Network Monitoring · NOC</div>
+      </div>
+      <div class="project-card">
+        <div class="project-status"><span class="dot" style="background:var(--amber)"></span>Operational work</div>
+        <h3>Network Security Infrastructure</h3>
+        <p>Hands-on work with firewall and security infrastructure, including traffic analysis, security monitoring, and network troubleshooting.</p>
+        <div class="project-link">FortiGate · FortiSIEM · FortiMail · IDS</div>
+      </div>
+    </div>
+  </section>
 
+  <section id="education">
+    <div class="section-head">
+      <span class="tag">05</span>
+      <h2>Education &amp; certifications</h2>
+    </div>
+    <div class="edu-card">
+      <h3>Bachelor / Licence in Computer Science</h3>
+      <div class="meta">Specialization: Network Infrastructure &amp; Cybersecurity · Institut Numidia of Technology (NIT), Algeria</div>
+    </div>
+    <div class="edu-card">
+      <h3>Cisco Networking &amp; Cybersecurity Certifications</h3>
+      <ul class="cert-list">
+        <li>Introduction to Networks</li>
+        <li>Introduction to Cybersecurity</li>
+        <li>Cybersecurity Essentials</li>
+      </ul>
+    </div>
+  </section>
 
-<!-- FOOTER -->
+  <section id="contact">
+    <div class="section-head">
+      <span class="tag">06</span>
+      <h2>Get in touch</h2>
+    </div>
+    <div class="contact-panel">
+      <h3 style="font-size:1.2rem;">Interested in networking, cybersecurity, or collaboration?</h3>
+      <p>Feel free to reach out — I'm happy to talk about NOC operations, security monitoring, or potential projects.</p>
+      <div class="contact-links">
+        <a class="btn btn-ghost" href="https://github.com/abdouod1" target="_blank">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/abdelhadi-ouladdaoud-13b0a1230/" target="_blank">LinkedIn</a>
+        <a class="btn btn-primary" href="mailto:oddadi11@gmail.com">Email me</a>
+      </div>
+    </div>
+  </section>
 
-<footer>
+</main>
 
-    © 2026 Abdelhadi Ouladdaoud. All rights reserved.
-
+<footer class="wrap">
+  © 2026 Abdelhadi Ouladdaoud. All rights reserved.
 </footer>
 
 </body>
