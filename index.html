@@ -299,8 +299,8 @@
   }
 
   /* PROJECTS */
-  .projects{ display: grid; gap: 20px; }
-  @media(min-width: 780px){ .projects{ grid-template-columns: repeat(3, 1fr); } }
+  .projects{ display: grid; gap: 20px; grid-template-columns: 1fr; }
+  @media(min-width: 700px){ .projects{ grid-template-columns: repeat(2, 1fr); } }
   .project-card{
     background: var(--panel);
     border: 1px solid var(--border);
@@ -543,6 +543,12 @@
       <h2>Featured projects</h2>
     </div>
     <div class="projects">
+      <div class="project-card">
+        <div class="project-status"><span class="dot" style="background:var(--accent)"></span>Personal project</div>
+        <h3>Network Monitoring Dashboard</h3>
+        <p>A lightweight uptime and latency monitor built with Python and Flask. Checks a list of hosts/websites on a schedule, logs results to SQLite, and displays live status and response-time trends on a dashboard.</p>
+        <a class="project-link" href="https://github.com/abdouod1/network-monitor-dashboard" target="_blank">View on GitHub →</a>
+      </div>
       <div class="project-card">
         <div class="project-status"><span class="dot" style="background:var(--accent)"></span>Academic project</div>
         <h3>SIEM Deployment &amp; Network Intrusion Detection</h3>
