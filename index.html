@@ -300,7 +300,7 @@
 
   /* PROJECTS */
   .projects{ display: grid; gap: 20px; grid-template-columns: 1fr; }
-  @media(min-width: 700px){ .projects{ grid-template-columns: repeat(2, 1fr); } }
+  @media(min-width: 780px){ .projects{ grid-template-columns: repeat(3, 1fr); } }
   .project-card{
     background: var(--panel);
     border: 1px solid var(--border);
@@ -560,18 +560,6 @@
         <h3>Network Intrusion Detection System</h3>
         <p>An end-to-end IDS pipeline: trained and compared 3 ML models (Decision Tree, Random Forest, Logistic Regression) on the UNSW-NB15 dataset, stored per-connection predictions in a Dockerized MySQL database, and built a live Superset dashboard showing flagged intrusions by category.</p>
         <a class="project-link" href="https://github.com/abdouod1/network-intrusion-detection" target="_blank">View on GitHub →</a>
-      </div>
-      <div class="project-card">
-        <div class="project-status"><span class="dot" style="background:var(--amber)"></span>Operational work</div>
-        <h3>Network Monitoring Infrastructure</h3>
-        <p>Monitoring and operational management of network infrastructure using PRTG, focused on availability, bandwidth utilization, performance, and incident detection.</p>
-        <div class="project-link">PRTG · Network Monitoring · NOC</div>
-      </div>
-      <div class="project-card">
-        <div class="project-status"><span class="dot" style="background:var(--amber)"></span>Operational work</div>
-        <h3>Network Security Infrastructure</h3>
-        <p>Hands-on work with firewall and security infrastructure, including traffic analysis, security monitoring, and network troubleshooting.</p>
-        <div class="project-link">FortiGate · FortiSIEM · FortiMail · IDS</div>
       </div>
     </div>
   </section>
